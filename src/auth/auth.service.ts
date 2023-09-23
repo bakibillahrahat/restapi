@@ -1,4 +1,5 @@
 import { Injectable } from '@nestjs/common';
+import { User, Bookmark } from '@prisma/client';
 
 @Injectable({})
 export class AuthService {
@@ -7,8 +8,6 @@ export class AuthService {
   }
 
   signin() {
-    { msg: 'I am signed up.' }
+    return { msg: 'I am signed up.' };
   }
 }
-
-const service = new AuthService();
