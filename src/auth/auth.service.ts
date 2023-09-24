@@ -71,10 +71,13 @@ export class AuthService {
       );
     // send back the user
     delete user.hash;
-    return user;
+    return this.signToken(user.id, user.email);
   }
 
-  async signToken(userId: number, email: string):Promise<string> {
+  async signToken(
+    userId: number,
+    email: string,
+  ): Promise<string> {
     const payload = {
       sub: userId,
       email,
