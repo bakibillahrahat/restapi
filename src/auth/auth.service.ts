@@ -28,9 +28,7 @@ export class AuthService {
           hash,
         },
       });
-      delete user.hash;
-      // return the saved user
-      return user;
+      return this.signToken(user.id, user.email);
     } catch (error) {
       if (
         error instanceof
@@ -69,8 +67,6 @@ export class AuthService {
       throw new ForbiddenException(
         'Credentials incorrect',
       );
-    // send back the user
-    delete user.hash;
     return this.signToken(user.id, user.email);
   }
 
