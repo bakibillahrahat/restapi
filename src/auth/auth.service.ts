@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import {
   ForbiddenException,
   Injectable,
@@ -17,7 +18,7 @@ export class AuthService {
     private config: ConfigService,
   ) {}
 
-  async signup(dto: AuthDto) {
+  async signUp(dto: AuthDto) {
     // generate the password hash
     const hash = await argon.hash(dto.password);
     // save the new user in the db
@@ -45,7 +46,7 @@ export class AuthService {
     }
   }
 
-  async signin(dto: AuthDto) {
+  async signIn(dto: AuthDto) {
     // find the user by email
     const user =
       await this.prisma.user.findUnique({

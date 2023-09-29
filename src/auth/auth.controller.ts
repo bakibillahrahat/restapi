@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import {
   Body,
   Controller,
@@ -11,12 +12,12 @@ export class AuthController {
   constructor(private authService: AuthService) {}
 
   @Post('signup')
-  signup(@Body() dto: AuthDto) {
-    return this.authService.signup(dto);
+  signUp(@Body() dto: AuthDto) {
+    return this.authService.signUp(dto);
   }
 
   @Post('signin')
-  signin(@Body() dto: AuthDto) {
-    return this.authService.signin(dto);
+  signIn(@Body() dto: AuthDto) {
+    return this.authService.signIn(dto);
   }
 }
