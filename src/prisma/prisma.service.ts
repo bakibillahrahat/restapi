@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { Injectable } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { PrismaClient } from '@prisma/client';
@@ -12,5 +13,9 @@ export class PrismaService extends PrismaClient {
         },
       },
     });
+  }
+  cleanDb() {
+    return this.bookmark.deleteMany()
+    this.user.deleteMany()
   }
 }
