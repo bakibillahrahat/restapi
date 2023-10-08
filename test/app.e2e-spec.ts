@@ -31,6 +31,7 @@ describe('App e2e', () => {
   });
   describe('Auth', () => {
     describe('Signup', () => {});
+    describe('Signin', () => {});
   });
 
   describe('User', () => {});
