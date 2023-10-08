@@ -38,5 +38,7 @@ describe('App e2e', () => {
     describe('Get me', () => {});
     describe('Edit user', () => {});
   });
-  describe('Bookmarks', () => {});
+  describe('Bookmarks', () => {
+    describe('Create bookmark', () => {});
+  });
 });
