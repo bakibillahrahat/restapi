@@ -22,6 +22,7 @@ describe('App e2e', () => {
       }),
     );
     await app.init();
+    prisma = app.get(PrismaService);
   });
   afterAll(() => {
     app.close();
