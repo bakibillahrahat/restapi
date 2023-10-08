@@ -29,7 +29,10 @@ describe('App e2e', () => {
   afterAll(() => {
     app.close();
   });
-  describe('Auth', () => {});
+  describe('Auth', () => {
+    describe('Signup', () => {});
+  });
+
   describe('User', () => {});
   describe('Bookmarks', () => {});
 });
