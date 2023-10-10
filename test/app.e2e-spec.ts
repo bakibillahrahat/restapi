@@ -42,5 +42,6 @@ describe('App e2e', () => {
     describe('Create bookmark', () => {});
     describe('Get bookmarks', () => {});
     describe('Get bookmark by id', () => {});
+    describe('Edit bookmark', () => {});
   });
 });
