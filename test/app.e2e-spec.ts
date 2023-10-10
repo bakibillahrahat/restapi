@@ -40,6 +40,6 @@ describe('App e2e', () => {
   });
   describe('Bookmarks', () => {
     describe('Create bookmark', () => {});
-    describe('Create bookmark', () => {});
+    describe('Create bookmarks', () => {});
   });
 });
