@@ -5,6 +5,7 @@ import {
   INestApplication,
   ValidationPipe,
 } from '@nestjs/common';
+import * as pactum from 'pactum';
 import { PrismaService } from 'src/prisma/prisma.service';
 
 describe('App e2e', () => {
