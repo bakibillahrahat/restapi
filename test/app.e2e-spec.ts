@@ -31,9 +31,11 @@ describe('App e2e', () => {
   });
   describe('Auth', () => {
     describe('Signup', () => {
-      it.todo('should signup')
+      it.todo('should signup');
     });
-    describe('Signin', () => {});
+    describe('Signin', () => {
+      it.todo('should signin');
+    });
   });
 
   describe('User', () => {
