@@ -23,6 +23,8 @@ describe('App e2e', () => {
       }),
     );
     await app.init();
+    await app.listen(3333)
+
     prisma = app.get(PrismaService);
 
     await prisma.cleanDb();
