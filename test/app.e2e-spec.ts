@@ -34,12 +34,12 @@ describe('App e2e', () => {
     app.close();
   });
   describe('Auth', () => {
+    const dto: AuthDto = {
+      email: 'bakibillahrahat@gmail.com',
+      password: '1234',
+    };
     describe('Signup', () => {
       it('should signup', () => {
-        const dto: AuthDto = {
-          email: 'bakibillahrahat@gmail.com',
-          password: '1234',
-        };
         return pactum
           .spec()
           .post(
