@@ -34,7 +34,9 @@ describe('App e2e', () => {
   });
   describe('Auth', () => {
     describe('Signup', () => {
-      it.todo('should signup');
+      it('should signup', () => {
+        return pactum.spec().post('http://localhost:3333/auth/signup')
+      });
     });
     describe('Signin', () => {
       it.todo('should signin');
