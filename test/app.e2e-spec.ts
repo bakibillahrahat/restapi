@@ -39,6 +39,18 @@ describe('App e2e', () => {
       password: '1234',
     };
     describe('Signup', () => {
+      it('should throw if email empty', () => {
+        return pactum
+          .spec()
+          .post(
+            'http://localhost:3333/auth/signup',
+          )
+          .withBody({
+            password: dto.password,
+          })
+          .expectStatus(400);
+      });
+
       it('should signup', () => {
         return pactum
           .spec()
@@ -55,7 +67,7 @@ describe('App e2e', () => {
           .spec()
           .post('/auth/signin')
           .withBody(dto)
-          .expectStatus(200)
+          .expectStatus(200);
       });
     });
   });
