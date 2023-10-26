@@ -50,7 +50,7 @@ describe('App e2e', () => {
       });
     });
     describe('Signin', () => {
-      it.todo('should signin');
+      it('should signin');
     });
   });
 
