@@ -46,7 +46,7 @@ describe('App e2e', () => {
             'http://localhost:3333/auth/signup',
           )
           .withBody({
-            password: dto.password,
+            email: dto.email,
           })
           .expectStatus(400);
       });
