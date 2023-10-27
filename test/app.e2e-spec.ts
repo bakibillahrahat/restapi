@@ -85,7 +85,7 @@ describe('App e2e', () => {
         return pactum
           .spec()
           .post(
-            'http://localhost:3333/auth/signup',
+            'http://localhost:3333/auth/signin',
           )
           .withBody({
             password: dto.password,
@@ -96,7 +96,7 @@ describe('App e2e', () => {
         return pactum
           .spec()
           .post(
-            'http://localhost:3333/auth/signup',
+            'http://localhost:3333/auth/signin',
           )
           .withBody({
             email: dto.email,
@@ -107,7 +107,7 @@ describe('App e2e', () => {
         return pactum
           .spec()
           .post(
-            'http://localhost:3333/auth/signup',
+            'http://localhost:3333/auth/signin',
           )
           .expectStatus(400);
       });
