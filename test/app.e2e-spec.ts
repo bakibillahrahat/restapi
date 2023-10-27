@@ -70,6 +70,36 @@ describe('App e2e', () => {
       });
     });
     describe('Signin', () => {
+      it('should throw if password empty', () => {
+        return pactum
+          .spec()
+          .post(
+            'http://localhost:3333/auth/signup',
+          )
+          .withBody({
+            password: dto.password,
+          })
+          .expectStatus(400);
+      });
+      it('should throw if email empty', () => {
+        return pactum
+          .spec()
+          .post(
+            'http://localhost:3333/auth/signup',
+          )
+          .withBody({
+            email: dto.email,
+          })
+          .expectStatus(400);
+      });
+      it('should throw if no body provided', () => {
+        return pactum
+          .spec()
+          .post(
+            'http://localhost:3333/auth/signup',
+          )
+          .expectStatus(400);
+      });
       it('should signin', () => {
         return pactum
           .spec()
