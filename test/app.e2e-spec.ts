@@ -126,11 +126,10 @@ describe('App e2e', () => {
     describe('Get me', () => {
       it('should get current user', () => {
         return pactum
-        .spec()
-        .post('/users/me')
-        .withBody(dto)
-        .expectStatus(200)
-      })
+          .spec()
+          .post('/users/me')
+          .expectStatus(200);
+      });
     });
     describe('Edit user', () => {});
   });
