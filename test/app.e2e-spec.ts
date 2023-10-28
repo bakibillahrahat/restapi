@@ -127,7 +127,7 @@ describe('App e2e', () => {
       it('should get current user', () => {
         return pactum
           .spec()
-          .post('/users/me')
+          .get('/users/me')
           .expectStatus(200);
       });
     });
