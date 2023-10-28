@@ -116,7 +116,8 @@ describe('App e2e', () => {
           .spec()
           .post('/auth/signin')
           .withBody(dto)
-          .expectStatus(200);
+          .expectStatus(200)
+          .stores('userAt', 'access_token');
       });
     });
   });
