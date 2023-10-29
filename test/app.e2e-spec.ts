@@ -129,7 +129,7 @@ describe('App e2e', () => {
           .spec()
           .get('/users/me')
           .withHeaders({
-            Authorization: 'Rahat'
+            Authorization: 'Rahat $S{userAt}'
           })
           .expectStatus(200);
       });
