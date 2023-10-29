@@ -129,7 +129,7 @@ describe('App e2e', () => {
           .spec()
           .get('/users/me')
           .withHeaders({
-            Authorization: 'Rahat $S{userAt}'
+            Authorization: 'Rahat $S{userAt}',
           })
           .expectStatus(200);
       });
@@ -140,7 +140,7 @@ describe('App e2e', () => {
     describe('Create bookmark', () => {});
     describe('Get bookmarks', () => {});
     describe('Get bookmark by id', () => {});
-    describe('Edit bookmark', () => {});
+    describe('Edit bookmark by id', () => {});
     describe('Delete bookmark', () => {});
   });
 });
