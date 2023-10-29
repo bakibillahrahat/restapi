@@ -128,6 +128,9 @@ describe('App e2e', () => {
         return pactum
           .spec()
           .get('/users/me')
+          .withHeaders({
+            Authorization: 'Rahat'
+          })
           .expectStatus(200);
       });
     });
