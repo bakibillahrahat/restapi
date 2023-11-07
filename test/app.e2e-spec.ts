@@ -140,7 +140,9 @@ describe('App e2e', () => {
     describe('Create bookmark', () => {
       
     });
-    describe('Get bookmarks', () => {});
+    describe('Get bookmarks', () => {
+      it('should get current bookmarks', () => {})
+    });
     describe('Get bookmark by id', () => {});
     describe('Edit bookmark by id', () => {});
     describe('Delete bookmark by id', () => {});
