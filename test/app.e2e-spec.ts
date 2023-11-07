@@ -141,7 +141,11 @@ describe('App e2e', () => {
       
     });
     describe('Get bookmarks', () => {
-      it('should get current bookmarks', () => {})
+      it('should get current bookmarks', () => {
+        return pactum
+        .spec()
+        .get('/bookmarks/id')
+      })
     });
     describe('Get bookmark by id', () => {});
     describe('Edit bookmark by id', () => {});
