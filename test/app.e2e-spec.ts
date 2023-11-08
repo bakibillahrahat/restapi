@@ -148,6 +148,7 @@ describe('App e2e', () => {
         .withHeaders({
           Authorization : 'Rahat $S{userAt}'
         })
+        .expectStatus(201)
       })
     });
     describe('Get bookmark by id', () => {});
