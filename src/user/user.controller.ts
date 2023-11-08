@@ -1,4 +1,5 @@
 import {
+  Body,
   Controller,
   Get,
   Patch,
@@ -8,6 +9,7 @@ import { User } from '@prisma/client';
 
 import { JwtGuard } from '../../src/auth/guard';
 import { GetUser } from '../../src/decorator';
+import { EditUserDto } from './dto';
 @UseGuards(JwtGuard)
 @Controller('users')
 export class UserController {
@@ -16,5 +18,5 @@ export class UserController {
     return user;
   }
   @Patch()
-  editUser() {}
+  editUser(@Body() dto: EditUserDto) {}
 }
