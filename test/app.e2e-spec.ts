@@ -145,6 +145,9 @@ describe('App e2e', () => {
         return pactum
         .spec()
         .get('/bookmarks/id')
+        .withHeaders({
+          Authorization : 'Rahat $S{userAt}'
+        })
       })
     });
     describe('Get bookmark by id', () => {});
